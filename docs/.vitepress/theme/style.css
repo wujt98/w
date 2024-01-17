@@ -1,0 +1,17 @@
+:root {
+	/* 标题文本颜色 */
+
+	/* --vp-home-hero-name-color: transparent;
+    --vp-home-hero-name-background: linear-gradient(135deg, #F6CEEC 10%, #D939CD 100%); */
+}
+.VPNav .logo,
+.VPHome .image-src {
+	border-radius: 50%;
+}
+
+@media (width >= 960px) {
+	.VPHome .image-src {
+		max-width: 256px;
+		max-height: 256px;
+	}
+}
