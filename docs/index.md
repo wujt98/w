@@ -10,12 +10,14 @@ hero:
         - theme: brand
           text: 开始学习
           link: /api-examples
+
         - theme: alt
           text: 工具箱
           link: /markdown-examples
-# features:
-#     - title: 标题
-#       link: /api-examples
-#       details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-#       linkText: 跳转
+
+features:
+    - title: 标题
+      link: /api-examples
+      details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
+      linkText: 跳转
 ---
