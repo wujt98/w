@@ -6,18 +6,21 @@ hero:
     # text: ''
     tagline: '这是一个使用VitePress构建的项目，当前主要用于学习'
     image: '/avatar.jpg'
-    actions:
-        - theme: brand
-          text: 开始学习
-          link: /api-examples
+    # actions:
+    #     - theme: brand
+    #       text: 开始学习
+    #       link: /api-examples
 
-        - theme: alt
-          text: 工具箱
-          link: /markdown-examples
+    #     - theme: alt
+    #       text: 工具箱
+    #       link: /markdown-examples
 
 features:
-    - title: 标题
-      link: /api-examples
-      details: Lorem ipsum dolor sit amet, consectetur adipiscing elit
-      linkText: 跳转
+    - title: 项目规范
+      link: /views/specification
+      icon:
+          src: /avatar.jpg
+          width: 40
+          height: 40
+      details: Prettier、ESLint、StyleLint、EditorConfig
 ---

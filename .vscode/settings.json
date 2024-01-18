@@ -5,5 +5,13 @@
 	},
 	"stylelint.enable": true,
 	"stylelint.validate": ["css", "less", "postcss", "scss", "vue", "sass", "html"],
-	"files.eol": "\n"
+	"files.eol": "\n",
+	"[markdown]": {
+		// 快速补全
+		"editor.quickSuggestions": {
+			"other": true,
+			"comments": true,
+			"strings": true
+		}
+	}
 }

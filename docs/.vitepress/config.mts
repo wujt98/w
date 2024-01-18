@@ -1,25 +1,37 @@
 import { defineConfig } from 'vitepress'
+import { fileURLToPath, URL } from 'node:url'
 import { nav } from '../router/nav'
+import { sidebar } from '../router/sidebar'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
 	title: '名字还没想好',
 	head: [['link', { rel: 'icon', href: '/w/favicon.ico' }]],
 	base: '/w/',
+	lastUpdated: true,
 	themeConfig: {
 		darkModeSwitchLabel: '主题颜色',
 		logo: '/avatar.jpg',
 		nav,
-		sidebar: [
-			{
-				text: 'Examples',
-				items: [
-					{ text: 'Markdown Examples', link: '/markdown-examples' },
-					{ text: 'Runtime API Examples', link: '/api-examples' }
-				]
-			}
-		],
-
-		socialLinks: [{ icon: 'github', link: 'https://github.com/wujt98' }]
+		sidebar,
+		search: {
+			provider: 'local'
+		},
+		outline: {
+			label: '页面导航'
+		}
+	},
+	rewrites: {
+		'views/:pkg/(.*)': ':pkg/(.*)'
+	},
+	vite: {
+		resolve: {
+			alias: [
+				{
+					find: /^.*\/VPFeature\.vue$/,
+					replacement: fileURLToPath(new URL('../components/CustomFeature.vue', import.meta.url))
+				}
+			]
+		}
 	}
 })
