@@ -1,5 +1,6 @@
 ---
 outline: [2, 3]
+sidebar: false
 ---
 
 # 项目规范
