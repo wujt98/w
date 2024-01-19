@@ -29,19 +29,18 @@
 		"docs:dev": "vitepress dev docs",
 		"docs:build": "vitepress build docs",
 		"docs:preview": "vitepress preview docs",
-		"type:check": "vue-tsc --noEmit --skipLibCheck",
-		"preview": "npm run build:dev && vite preview",
-		"lint:eslint": "eslint --fix --ext .js,.ts,.vue ./src",
-		"lint:prettier": "prettier --write \"src/**/*.{js,ts,json,tsx,css,less,scss,vue,html,md}\"",
+		"lint:eslint": "eslint --fix --ext .js,.ts,.vue ./docs",
+		"lint:prettier": "prettier --write \"docs/**/*.{js,ts,json,tsx,css,less,scss,vue,html,md}\"",
 		"lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
 		"lint:lint-staged": "lint-staged",
-		"prepare": "husky install",
-		"release": "standard-version",
 		"commit": "git add -A && czg && git push"
 	},
 	"config": {
 		"commitizen": {
 			"path": "node_modules/cz-git"
 		}
+	},
+	"dependencies": {
+		"element-plus": "^2.5.1"
 	}
 }

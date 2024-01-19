@@ -8,9 +8,15 @@ export default defineConfig({
 	title: '名字还没想好',
 	head: [['link', { rel: 'icon', href: '/w/favicon.ico' }]],
 	base: '/w/',
-	lastUpdated: true,
 	themeConfig: {
-		darkModeSwitchLabel: '主题颜色',
+		darkModeSwitchLabel: '深浅主题',
+		lastUpdated: {
+			text: '最后更新于'
+		},
+		editLink: {
+			pattern: 'https://github.com/wujt98/w/edit/main/docs/:path',
+			text: '在 Github 上编辑此页面'
+		},
 		logo: '/avatar.jpg',
 		nav,
 		sidebar,
