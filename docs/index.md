@@ -1,6 +1,8 @@
 ---
 layout: home
 
+titleTemplate: false
+
 hero:
     name: '名字还没想好'
     # text: ''
@@ -23,4 +25,12 @@ features:
           width: 40
           height: 40
       details: Prettier、ESLint、StyleLint、EditorConfig
+
+    - title: Git 入门教程
+      link: /views/git
+      icon:
+          src: /avatar.jpg
+          width: 40
+          height: 40
+      details: 简单易懂的 Git 入门教程
 ---
