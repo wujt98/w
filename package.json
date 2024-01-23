@@ -29,11 +29,8 @@
 		"docs:dev": "vitepress dev docs",
 		"docs:build": "vitepress build docs",
 		"docs:preview": "vitepress preview docs",
-		"lint:eslint": "eslint --fix --ext .js,.ts,.vue ./docs",
-		"lint:prettier": "prettier --write \"docs/**/*.{js,ts,json,tsx,css,less,scss,vue,html,md}\"",
-		"lint:stylelint": "stylelint --cache --fix \"**/*.{vue,less,postcss,css,scss}\" --cache --cache-location node_modules/.cache/stylelint/",
 		"lint:lint-staged": "lint-staged",
-		"commit": "git add -A && czg && git push"
+		"commit": "czg && git push"
 	},
 	"config": {
 		"commitizen": {

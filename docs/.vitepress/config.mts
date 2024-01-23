@@ -2,10 +2,12 @@ import { defineConfig } from 'vitepress'
 import { fileURLToPath, URL } from 'node:url'
 import { nav } from '../router/nav'
 import { sidebar } from '../router/sidebar'
+import { NAME } from '../config'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
-	title: '名字还没想好',
+	title: NAME,
+	titleTemplate: `:title - ${NAME}`,
 	head: [['link', { rel: 'icon', href: '/w/favicon.ico' }]],
 	base: '/w/',
 	themeConfig: {
