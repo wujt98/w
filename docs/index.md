@@ -27,7 +27,7 @@ features:
       details: Prettier、ESLint、StyleLint、EditorConfig
 
     - title: Git 入门教程
-      link: /views/git
+      link: /GIT/git
       icon:
           src: /avatar.jpg
           width: 40
