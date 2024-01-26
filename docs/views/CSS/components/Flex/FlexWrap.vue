@@ -1,23 +1,23 @@
 <template>
 	<div class="container">
 		<div class="control">
-			<div class="title">flex-direction:</div>
-			<el-select v-model="flexDirection" placeholder="Select" size="small" style="width: 150px">
+			<div class="title">flex-wrap:</div>
+			<el-select v-model="flexWrap" placeholder="flex-wrap" size="small" style="width: 150px">
 				<el-option v-for="item in arr" :key="item" :label="item" :value="item" />
 			</el-select>
 		</div>
 
-		<FlexContainer :flex-direction="flexDirection" />
+		<FlexContainer :flex-wrap="flexWrap" :number="8" />
 	</div>
 </template>
 
-<script lang="ts" setup name="FlexDirection">
+<script lang="ts" setup name="FlexWrap">
 import { ElSelect, ElOption } from 'element-plus'
 import { ref } from 'vue'
 import FlexContainer from './FlexContainer.vue'
 
-const arr = ['row', 'row-reverse', 'column', 'column-reverse']
-const flexDirection = ref('row')
+const arr = ['nowrap', 'wrap', 'wrap-reverse']
+const flexWrap = ref('nowrap')
 </script>
 
 <style lang="scss" scoped>

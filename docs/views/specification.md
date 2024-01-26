@@ -620,12 +620,7 @@ module.exports = {
 }
 ```
 
-<pre>
-
-	<back-top :right="40" :bottom="60" />
-
-</pre>
-
+<BackTop />
 <script lang='ts' setup>
 import BackTop from '../components/BackTop.vue'
 </script>

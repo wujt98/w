@@ -10,7 +10,7 @@ export const nav: DefaultTheme.NavItem[] = [
 				text: 'CSS',
 				items: [
 					{
-						text: 'flex 布局',
+						text: 'Flex 布局',
 						link: '/CSS/flex'
 					}
 				]
