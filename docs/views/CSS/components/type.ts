@@ -6,11 +6,11 @@ export interface FlexContainer {
 	justifyContent?: 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around'
 	alignItems?: 'stretch' | 'flex-start' | 'flex-end' | 'center' | 'baseline'
 	alignContent?: 'stretch' | 'flex-start' | 'flex-end' | 'center' | 'space-between' | 'space-around'
-	flexBox?: FlexContainerItem
+	flexBox?: FlexContainerBoxItem[]
 }
-export interface FlexContainerItem {
-	width?: string
-	height?: string
+export interface FlexContainerBox {
+	width?: string | number
+	height?: string | number
 	text?: string | number
 	order?: number
 	flexGrow?: number
@@ -18,4 +18,10 @@ export interface FlexContainerItem {
 	flexBasis?: string | 'auto'
 	flex?: 'auto' | 'none' | [number, number?, (string | 'auto')?]
 	alignSelf?: 'auto' | 'flex-start' | 'flex-end' | 'center' | 'baseline' | 'stretch'
+}
+
+export interface FlexContainerBoxItem extends FlexContainerBox {
+	id?: string
+	isControl?: boolean
+	keys?: string
 }

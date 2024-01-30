@@ -4,27 +4,28 @@
 			<template v-for="item in arr" :key="item.id">
 				<div class="control" v-if="item.isControl">
 					<div class="title">{{ item.id }}</div>
-					<el-slider v-model="item.order" :min="0" :max="5" style="width: 100px" />
+					<el-select v-model="item.flexBasis" placeholder="flex-basis" size="small" style="width: 80px">
+						<el-option v-for="option in options" :key="option" :label="option" :value="option"></el-option>
+					</el-select>
 				</div>
 			</template>
 		</div>
-		<FlexContainer :flex-box="arr" flex-wrap="wrap"></FlexContainer>
+		<FlexContainer :flex-box="arr"></FlexContainer>
 	</div>
 </template>
 
-<script lang="ts" setup name="Order">
+<script lang="ts" setup name="FlexBasis">
 import { ref } from 'vue'
-import { ElSlider } from 'element-plus'
+import { ElSelect, ElOption } from 'element-plus'
 import FlexContainer from './FlexContainer.vue'
 import { FlexContainerBoxItem } from '../type'
 
 const arr = ref<FlexContainerBoxItem[]>([
-	{ id: 'box1', isControl: false, keys: 'order', order: 1, width: '70px' },
-	{ id: 'box2', isControl: true, keys: 'order', order: 1 },
-	{ id: 'box3', isControl: false, keys: 'order', order: 1, width: '100px' },
-	{ id: 'box4', isControl: true, keys: 'order', order: 1 },
-	{ id: 'box5', isControl: false, keys: 'order', order: 1, width: '120px' }
+	{ id: 'box1', isControl: true, keys: 'flexBasis', flexBasis: 'auto' },
+	{ id: 'box2', isControl: true, keys: 'flexBasis', flexBasis: '120px' },
+	{ id: 'box3', isControl: true, keys: 'flexBasis', flexBasis: '200px' }
 ])
+const options = ['auto', '100px', '120px', '150px', '200px']
 </script>
 
 <style lang="scss" scoped>

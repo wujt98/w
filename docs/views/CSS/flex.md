@@ -132,8 +132,38 @@ Flexible Box 模型，通常被称为 flexbox，它给 flexbox 的子元素之�
 
 ### order 属性
 
-::: info 尝试更改一下每个盒子的 `order` 吧
+::: info 尝试更改一下盒子的 `order` 吧
 <Order />
+:::
+
+### flex-grow 属性
+
+::: info 尝试更改一下盒子的 `flex-grow` 吧
+<FlexGrow />
+:::
+
+### flex-shrink 属性
+
+::: info 尝试更改一下盒子的 `flex-shrink` 吧
+<FlexShrink />
+:::
+
+### flex-basis 属性
+
+::: info 尝试更改一下盒子的 `flex-basis` 吧
+<FlexBasis />
+:::
+
+### flex 属性
+
+::: info 尝试更改一下盒子的 `flex-grow`  `flex-shrink`  `flex-basis` 吧
+<Flex />
+:::
+
+### align-self 属性
+
+::: info 尝试更改一下盒子的 `align-self` 吧
+<AlignSelf />
 :::
 
 <BackTop />
@@ -149,4 +179,9 @@ import AlignContent from './components/Flex/AlignContent.vue'
 import FlexContainerAll from './components/Flex/FlexContainerAll.vue'
 
 import Order from './components/Flex/Order.vue'
+import FlexGrow from './components/Flex/FlexGrow.vue'
+import FlexShrink from './components/Flex/FlexShrink.vue'
+import FlexBasis from './components/Flex/FlexBasis.vue'
+import Flex from './components/Flex/Flex.vue'
+import AlignSelf from './components/Flex/AlignSelf.vue'
 </script>

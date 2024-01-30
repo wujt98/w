@@ -1,18 +1,23 @@
 <template>
 	<div class="cantainer" :style="{ flexDirection, flexWrap, justifyContent, alignItems, alignContent, minHeight }">
-		<FlexBox
-			v-for="item in number"
-			:key="item"
-			:text="item"
-			:width="flexBox?.width"
-			:height="flexBox?.height"
-			:order="flexBox?.order"
-			:flex-grow="flexBox?.flexGrow"
-			:flex-shrink="flexBox?.flexShrink"
-			:flex-basis="flexBox?.flexBasis"
-			:flex="flexBox?.flex"
-			:align-self="flexBox?.alignSelf"
-		/>
+		<template v-if="flexBox.length">
+			<flex-box
+				v-for="(item, index) in flexBox"
+				:key="index"
+				:keys="item.keys"
+				:text="item.id || index + 1"
+				:width="item.width"
+				:height="item.height"
+				:order="item.order"
+				:flex-grow="item.flexGrow"
+				:flex-shrink="item.flexShrink"
+				:flex-basis="item.flexBasis"
+				:align-self="item.alignSelf"
+			></flex-box>
+		</template>
+		<template v-else>
+			<flex-box v-for="item in number" :key="item" :text="item"></flex-box>
+		</template>
 	</div>
 </template>
 
@@ -28,7 +33,7 @@ withDefaults(defineProps<FlexContainer>(), {
 	justifyContent: 'flex-start',
 	alignItems: 'stretch',
 	alignContent: 'stretch',
-	flexBox: () => ({})
+	flexBox: () => []
 })
 </script>
 
