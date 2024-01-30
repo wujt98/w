@@ -2,7 +2,7 @@ import { defineConfig } from 'vitepress'
 import { fileURLToPath, URL } from 'node:url'
 import { nav } from '../router/nav'
 import { sidebar } from '../router/sidebar'
-import { NAME } from '../config'
+import { NAME, SEARCH_LOCALES } from '../config'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -23,7 +23,10 @@ export default defineConfig({
 		nav,
 		sidebar,
 		search: {
-			provider: 'local'
+			provider: 'local',
+			options: {
+				locales: SEARCH_LOCALES
+			}
 		},
 		outline: {
 			label: '页面导航'
