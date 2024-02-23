@@ -6,6 +6,10 @@ export const sidebar: DefaultTheme.Sidebar = [
 			{
 				text: 'Flex 布局',
 				link: '/CSS/flex'
+			},
+			{
+				text: 'Grid 布局',
+				link: '/CSS/grid'
 			}
 		]
 	}
